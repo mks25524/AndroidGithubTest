@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product price:"
+        android:id="@+id/prouct_price"
+        android:textSize="20sp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/prouct_price"
+        android:id="@+id/inputProductPrice"
+        android:inputType="number"
+        android:hint="tk"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VAT"
+        android:layout_below="@+id/inputProductPrice"
+        android:textSize="20sp"
+        android:id="@+id/vat"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputProductPrice"
+        android:id="@+id/inputVat"
+        android:inputType="number"
+        android:hint="%"
+        android:gravity="center"
+        android:layout_alignStart="@+id/inputProductPrice" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Discount"
+        android:layout_below="@+id/inputVat"
+        android:textSize="20sp"
+        android:id="@+id/discount"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputVat"
+        android:id="@+id/inputDiscont"
+        android:inputType="number"
+        android:hint="%"
+        android:gravity="center"
+        android:layout_alignStart="@+id/inputProductPrice" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Calculate"
+        android:layout_below="@+id/inputDiscont"
+        android:layout_alignParentEnd="true"
+        android:onClick="calculate"
+        android:layout_marginTop="30dp"
+        android:id="@+id/calculate"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/resultText"
+        android:layout_below="@+id/calculate"
+        android:layout_marginTop="44dp"
+        android:layout_alignParentEnd="true"
+        android:hint="Final result"/>
+
+
+</RelativeLayout>
